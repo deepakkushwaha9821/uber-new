@@ -55,7 +55,7 @@ const Home = () => {
     socket.on('ride-started', ride => {
         console.log("ride")
         setWaitingForDriver(false)
-        navigate('/riding', { state: { ride } }) // Updated navigate to include ride data
+        navigate('/riding', { state: { ride } }) 
     })
 
 
@@ -71,7 +71,7 @@ const Home = () => {
             })
             setPickupSuggestions(response.data)
         } catch {
-            // handle error
+           
         }
     }
 
@@ -99,7 +99,7 @@ const Home = () => {
             gsap.to(panelRef.current, {
                 height: '70%',
                 padding: 24
-                // opacity:1
+               
             })
             gsap.to(panelCloseRef.current, {
                 opacity: 1
@@ -108,7 +108,7 @@ const Home = () => {
             gsap.to(panelRef.current, {
                 height: '0%',
                 padding: 0
-                // opacity:0
+                
             })
             gsap.to(panelCloseRef.current, {
                 opacity: 0
